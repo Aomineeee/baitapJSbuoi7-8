@@ -4,7 +4,7 @@ var songuyenEl = document.getElementById("songuyen")
 var songuyen1El = document.getElementById("songuyen1")
 var songuyen2El = document.getElementById("songuyen2")
 var numArr = []
-function ketQua(tongSoDuong, countSoDuong, soAmNhoNhat, soDuongNhoNhat, soChanCuoiCung, hoanDoiHaiSoNguyen, soNguyenToDauTien,sapXepSoNguyen) {
+function ketQua(tongSoDuong, countSoDuong, soAmNhoNhat, soDuongNhoNhat, soChanCuoiCung, hoanDoiHaiSoNguyen, soNguyenToDauTien, sapXepSoNguyen) {
     document.getElementById("result1").innerText = tongSoDuong;
     document.getElementById("result2").innerText = countSoDuong;
     document.getElementById("result3").innerText = soAmNhoNhat;
@@ -35,7 +35,7 @@ function themso() {
     var indexSochan;
     var hoanDoiHaiSoNguyen;
     var soNguyenToDauTien;
-    
+
     songuyenEl.value = "";
     for (i = 0; i < numArr.length; i++) {
         if (numArr[i] % 2 == 0) {
@@ -83,12 +83,14 @@ function themso() {
         numArr[b] = temp;
         hoanDoiHaiSoNguyen = numArr;
     }
-    var numbers=numArr;
-    numbers.sort();
-    console.log(numbers);
-    var sapXepSoNguyen=numbers.sort()
-
+    var numbers = numArr;
+    numbers = numbers.sort(function(a,b){
+        return a-b;
+    });
+    var sapXepSoNguyen = numbers
     
 
-    ketQua(tongSoDuong, countSoDuong, soAmNhoNhat, soDuongNhoNhat, soChanCuoiCung, hoanDoiHaiSoNguyen, soNguyenToDauTien,sapXepSoNguyen);
+
+
+    ketQua(tongSoDuong, countSoDuong, soAmNhoNhat, soDuongNhoNhat, soChanCuoiCung, hoanDoiHaiSoNguyen, soNguyenToDauTien, sapXepSoNguyen);
 }
