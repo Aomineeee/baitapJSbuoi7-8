@@ -84,13 +84,9 @@ function themso() {
         hoanDoiHaiSoNguyen = numArr;
     }
     var numbers = numArr;
-    numbers = numbers.sort(function(a,b){
-        return a-b;
+    numbers = numbers.sort(function (a, b) {
+        return a - b;
     });
     var sapXepSoNguyen = numbers
-    
-
-
-
     ketQua(tongSoDuong, countSoDuong, soAmNhoNhat, soDuongNhoNhat, soChanCuoiCung, hoanDoiHaiSoNguyen, soNguyenToDauTien, sapXepSoNguyen);
 }
